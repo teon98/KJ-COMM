@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-q=*+_o(9$4#v^1qn+jh1iu-0stc_a+#tlhdz&-f3r7_sey7y8e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'your-domain.com']
+ALLOWED_HOSTS = ['www.kjjhss.co.kr', '127.0.0.1', 'localhost', 'your-domain.com']
 
 #세션 엔진 설정
 # 세션 엔진 설정 (기본: 데이터베이스 기반 세션)
