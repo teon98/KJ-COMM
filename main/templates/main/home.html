@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+  </head>
+  <body>
+    <h1>Welcome, {{username}}!</h1>
+    <!-- 로그아웃 -->
+    {% if user.is_authenticated %}
+    <p>You are logged in as {{ user.username }}</p>
+    <a href="{% url 'logout' %}">Logout</a>
+    <!-- 로그아웃 링크 -->
+    {% else %}
+    <p>You are not logged in.</p>
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+
+    <!-- 관리자 여부 표시 -->
+    {% if is_superuser %}
+    <p>You are a superuser with all permissions.</p>
+    {% elif is_staff %}
+    <p>You are a staff member with additional permissions.</p>
+    {% else %}
+    <p>You are a regular user.</p>
+    {% endif %}
+  </body>
+</html>
